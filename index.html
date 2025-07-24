@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Exam Enrollment Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Online Exam Enrollment Form</h1>
+
+  <form action="/serverlogic" method="post">
+
+    <fieldset>
+
+      <legend>Student Details</legend>
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your full name" required maxlength="50" autofocus style="text-transform: uppercase;">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="phone">Mobile Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="10-digit number" maxlength="10" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" placeholder="Enter age" required>
+
+    </fieldset>
+
+    <fieldset>
+
+      <legend>Exam Preferences</legend>
+
+      <label for="exam">Select Exam:</label>
+
+      <select id="exam" name="exam" required>
+        <option value="">--Select--</option>
+        <option value="jee">JEE</option>
+        <option value="neet">NEET</option>
+        <option value="gate">GATE</option>
+        <option value="cat">CAT</option>
+        <option value="ugc">UGC NET</option>
+      </select>
+
+      <label>Exam Mode:</label>
+
+      <input type="radio" id="online" name="mode" value="Online" required class="inline" checked>
+      <label for="online" class="inline">Online</label>
+
+      <input type="radio" id="offline" name="mode" value="Offline" required class="inline">
+      <label for="offline" class="inline">Offline</label>
+
+      <label>Subjects Enrolled:</label>
+
+      <input type="checkbox" id="maths" name="subject_maths" value="Maths" class="inline" checked>
+      <label for="maths" class="inline">Maths</label>
+
+      <input type="checkbox" id="physics" name="subject_physics" value="Physics" class="inline">
+      <label for="physics" class="inline">Physics</label>
+
+      <input type="checkbox" id="chemistry" name="subject_chemistry" value="Chemistry" class="inline">
+      <label for="chemistry" class="inline">Chemistry</label>
+
+      <input type="checkbox" id="biology" name="subject_biology" value="Biology" class="inline">
+      <label for="biology" class="inline">Biology</label>
+
+    </fieldset>
+
+    <fieldset>
+
+      <legend>Login Setup</legend>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Create a strong password" required minlength="8">
+
+      <label for="profile">Upload Profile Picture:</label>
+      <input type="file" id="profile" name="profile" required>
+
+      <label for="website">Your Website (optional):</label>
+      <input type="url" id="website" name="website" placeholder="https://example.com">
+
+      <label for="search">Search Exam Info:</label>
+      <input type="search" id="search" name="search" placeholder="Search exams here...">
+
+    </fieldset>
+
+    <fieldset>
+
+      <legend>Other Details</legend>
+
+      <label for="comments">Why are you enrolling for this exam?</label>
+      <textarea id="comments" name="comments" placeholder="Explain your goal..." required></textarea>
+
+      <label for="progress">Profile Completion:</label>
+      <progress id="progress" value="60" max="100">60%</progress>
+
+    </fieldset>
+    
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+  </form>
+</body>
+</html>
